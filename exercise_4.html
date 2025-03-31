@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Javascript Events</title>
+    <style>
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter something here</h2>
+    <input type="text" id="input1" onfocus="focusevent()" />
+
+    <script>
+        const body = document.body;
+
+        function focusevent() {
+            body.classList.add('dark-mode');
+            window.localStorage.setItem('mode', 'dark');
+            document.getElementById("input1").style.background = "red";
+        }
+    </script>
+</body>
+</html>

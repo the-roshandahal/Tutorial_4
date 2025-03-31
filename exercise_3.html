@@ -1,0 +1,40 @@
+<!-- The main purpose of this code is to validate the 2 passwords entered by the user. 
+It checks whether the forst password and second password are same or not.
+If both the passwords are same, it performs the action, else it prompts the alert saying "password must be same" -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <form name="f1" action="register.jsp" onsubmit="return matchpass()">
+        Username:<input type="username" name="username" /><br />
+        Password:<input type="password" name="password" /><br />
+        <input type="submit">
+    </form>
+
+
+    <script type="text/javascript">
+        function matchpass() {
+            var username = document.f1.username.value;
+            var password = document.f1.password.value;
+
+            if (username == "roshan" && password == "hellp") {
+                alert("credential matched");
+                return true;
+            }
+            else {
+                alert("invalid credentials");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
